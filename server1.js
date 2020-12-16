@@ -4,7 +4,7 @@ const works = true
 app.get('/api', (req, res, next) => {
 
   if (works) {
-    res.setHeader('Access-Control-Allow-Origin', '*') // or just leave this out all together
+    res.setHeader('Access-Control-Allow-Origin', '*') // blank won't work, which defeats the purpose, I would imagine?
   } else {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5050')
   }
